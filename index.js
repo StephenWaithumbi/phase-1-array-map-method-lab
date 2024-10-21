@@ -14,8 +14,7 @@ const tutorials = [
 
 const titleCased = () => {
   return tutorials.map(tutorial => {
-    return tutorial.split(' ').map(word => {
-      // Check if word should remain fully capitalized (for known acronyms)
+    return tutorial.split(' ').map(word => {      
       const exceptions = ["OO", "API", "NaN", "JSONP?", "StopPropagation", "PreventDefault?"];
       if (exceptions.includes(word)) {
         return word;
